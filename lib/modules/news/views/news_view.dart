@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../controllers/news_controller.dart';
 
 class NewsView extends GetView<NewsController> {

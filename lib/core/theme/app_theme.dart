@@ -5,6 +5,13 @@ import 'app_fonts.dart';
 /// Projedeki tüm metin stillerini ve diğer tema ayarlarını içerir.
 class AppTheme {
   // App bar başlık stili
+
+  static final ThemeData lightTheme = ThemeData(
+    scaffoldBackgroundColor:
+        Colors.white, // Arka plan rengini beyaz olarak ayarla
+    fontFamily: AppFonts.poppins, // Varsayılan yazı tipi poppins
+  );
+
   static const TextStyle appBarTitle = TextStyle(
     fontFamily: AppFonts.poppins,
     fontWeight: FontWeight.w600, // semibold
@@ -42,7 +49,7 @@ class AppTheme {
     fontFamily: AppFonts.poppins,
     fontWeight: FontWeight.w400, // regular
     fontSize: 12,
-    color: AppColors.gray,
+    color: AppColors.normalgray,
   );
 
   // Kart lokasyon stili
@@ -58,12 +65,12 @@ class AppTheme {
     fontFamily: AppFonts.poppins,
     fontWeight: FontWeight.w400, // regular
     fontSize: 12,
-    color: AppColors.gray,
+    color: AppColors.normalgray,
   );
 
   // TextField stili
   static final InputDecoration textFieldDecoration = InputDecoration(
-    fillColor: AppColors.textFieldBackground,
+    fillColor: AppColors.lightgray,
     filled: true, // Arka plan rengini doldur
     border: OutlineInputBorder(
       borderSide: BorderSide.none, // Border olmaması için

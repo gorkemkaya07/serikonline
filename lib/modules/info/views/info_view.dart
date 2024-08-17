@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../controllers/info_controller.dart';
 
 class InfoView extends GetView<InfoController> {
