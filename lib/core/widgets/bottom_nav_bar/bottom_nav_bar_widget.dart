@@ -7,6 +7,7 @@ import '../../../modules/home/views/home_view.dart';
 import '../../../modules/info/views/info_view.dart';
 import '../../../modules/news/views/news_view.dart';
 import '../../../modules/profile/views/profile_view.dart';
+import '../../theme/app_theme.dart';
 import 'bottom_nav_bar_controller.dart';
 
 class BottomNavBarWidget extends GetView<BottomNavBarWidgetController> {
@@ -15,6 +16,16 @@ class BottomNavBarWidget extends GetView<BottomNavBarWidgetController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+     appBar:  AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.white,
+          title: Column(
+            children: [
+              Image.asset('assets/images/app_logo.png', width: 35, height: 35),
+              const Text("SERIK ONLINE", style: AppTheme.appBarTitle)
+            ],
+          ),
+        ),
       body: Obx(() {
         return IndexedStack(
           index: controller.currentIndex.value,

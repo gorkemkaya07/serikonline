@@ -9,9 +9,8 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('HomePage')),
         body: SafeArea(
-          child: HomeStoryListWidget(stories: controller.stories),
-        ));
+      child: HomeStoryListWidget(stories: controller.stories),
+    ));
   }
 }
