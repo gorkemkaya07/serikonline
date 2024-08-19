@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:serikonline/core/widgets/custom_app_bar_widget/custom_app_bar_widget.dart';
 import '../controllers/news_controller.dart';
 
 class NewsView extends GetView<NewsController> {
@@ -7,8 +8,8 @@ class NewsView extends GetView<NewsController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: const Text('NewsPage')),
-        body: const SafeArea(child: Text('NewsController')));
+    return const Scaffold(
+        appBar: CustomAppBarWidget(),
+        body: SafeArea(child: Text('NewsController')));
   }
 }

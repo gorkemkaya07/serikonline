@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:serikonline/core/widgets/custom_app_bar_widget/custom_app_bar_widget.dart';
 import '../controllers/info_controller.dart';
 
 class InfoView extends GetView<InfoController> {
@@ -7,8 +8,8 @@ class InfoView extends GetView<InfoController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: const Text('InfoView')),
-        body: const SafeArea(child: Text('InfoViewController')));
+    return const Scaffold(
+        appBar: CustomAppBarWidget(),
+        body:  SafeArea(child: Text('InfoViewController')));
   }
 }

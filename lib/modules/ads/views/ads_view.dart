@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../core/widgets/custom_app_bar_widget/custom_app_bar_widget.dart';
 import '../controllers/ads_controller.dart';
 
 class AdsView extends GetView<AdsController> {
@@ -7,8 +8,8 @@ class AdsView extends GetView<AdsController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: const Text('AdsPage')),
-        body: const SafeArea(child: Text('AdsController')));
+    return const Scaffold(
+        appBar: CustomAppBarWidget(),
+        body: SafeArea(child: Text('AdsController')));
   }
 }

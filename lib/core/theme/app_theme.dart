@@ -15,7 +15,7 @@ class AppTheme {
   static const TextStyle appBarTitle = TextStyle(
     fontFamily: AppFonts.poppins,
     fontWeight: FontWeight.w700, // semibold
-    fontSize: 18,
+    fontSize: 20,
     color: AppColors.black,
     letterSpacing: 0.5, // Karakterler arası çok az boşluk
   );
