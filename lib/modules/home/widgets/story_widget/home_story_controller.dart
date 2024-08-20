@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'models/home_story_model.dart';
+import '../../../../data/models/home_story_model.dart';
 
 class HomeStoryController extends GetxController {
   late PageController pageController;

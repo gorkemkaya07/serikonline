@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:serikonline/modules/home/widgets/story/home_story_controller.dart';
-import 'package:serikonline/modules/home/widgets/story/models/home_story_model.dart';
+import 'package:serikonline/modules/home/widgets/story_widget/home_story_controller.dart';
+import 'package:serikonline/data/models/home_story_model.dart';
 
 class HomeStoryScreenWidget extends GetView<HomeStoryController> {
   final List<HomeStoryModel> stories;

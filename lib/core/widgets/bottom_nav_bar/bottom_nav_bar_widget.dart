@@ -15,11 +15,10 @@ class BottomNavBarWidget extends GetView<BottomNavBarWidgetController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
       body: Obx(() {
         return IndexedStack(
           index: controller.currentIndex.value,
-          children: const [
+          children: [
             HomeView(),
             NewsView(),
             AdsView(),

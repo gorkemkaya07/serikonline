@@ -14,11 +14,18 @@ class AppTheme {
 
   static const TextStyle appBarTitle = TextStyle(
     fontFamily: AppFonts.poppins,
-    fontWeight: FontWeight.w700, // semibold
+    fontWeight: FontWeight.w700, // bold
     fontSize: 20,
     color: AppColors.black,
     letterSpacing: 0.5, // Karakterler arası çok az boşluk
   );
+    static const TextStyle storyTitle = TextStyle(
+    fontFamily: AppFonts.poppins,
+    fontWeight: FontWeight.w400, // regular
+    fontSize: 12,
+    color: AppColors.black,
+  );
+
 
   // Section başlık stili
   static const TextStyle sectionTitle = TextStyle(
@@ -45,7 +52,7 @@ class AppTheme {
   );
 
   // Kart alt başlık stili
-  static const TextStyle cardSubtitle = TextStyle(
+  static const TextStyle cardDescription = TextStyle(
     fontFamily: AppFonts.poppins,
     fontWeight: FontWeight.w400, // regular
     fontSize: 12,

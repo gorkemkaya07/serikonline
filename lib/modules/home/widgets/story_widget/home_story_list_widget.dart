@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:serikonline/core/widgets/section_title_widget/section_title_widget.dart';
-import 'package:serikonline/modules/home/widgets/story/home_story_controller.dart';
-import 'package:serikonline/modules/home/widgets/story/home_story_screen_widget.dart';
-import 'package:serikonline/modules/home/widgets/story/models/home_story_model.dart';
+import 'package:serikonline/core/theme/app_theme.dart';
+import 'package:serikonline/core/widgets/section_title/section_title_widget.dart';
+import 'package:serikonline/modules/home/widgets/story_widget/home_story_controller.dart';
+import 'package:serikonline/modules/home/widgets/story_widget/home_story_screen_widget.dart';
+import 'package:serikonline/data/models/home_story_model.dart';
+
+import '../../../../core/widgets/custom_divider/custom_divider_widget.dart';
 
 class HomeStoryListWidget extends StatelessWidget {
   final List<HomeStoryModel> stories;
@@ -16,13 +19,13 @@ class HomeStoryListWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 15),
-        const SectionTitleWidget(title: 'Hikayeler'),
-        const SizedBox(height: 15),
+        
+        const SectionTitleWidget(title: 'Hikayeler',showAll: false),
+      
         Padding(
-          padding: const EdgeInsets.only(left: 20.0),
+          padding: const EdgeInsets.only(left: 16.0),
           child: SizedBox(
-            height: 140, // Yükseklik ayarı
+            height: 120, // Yükseklik ayarı
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: stories.length,
@@ -35,17 +38,17 @@ class HomeStoryListWidget extends StatelessWidget {
                     child: Column(
                       children: [
                         CircleAvatar(
-                          radius: 40,
+                          radius: 35,
                           backgroundImage:
                               CachedNetworkImageProvider(story.imageUrl),
                         ),
                         const SizedBox(height: 5),
                         SizedBox(
                           width:
-                              80, // CircleAvatar'ın genişliğine uygun olarak ayarlayın
+                              70, // CircleAvatar'ın genişliğine uygun olarak ayarlayın
                           child: Text(
                             story.title,
-                            style: const TextStyle(fontSize: 12),
+                            style: AppTheme.storyTitle,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.center, // Yazıyı ortalayın
                             maxLines:
@@ -60,6 +63,8 @@ class HomeStoryListWidget extends StatelessWidget {
             ),
           ),
         ),
+        const SizedBox(height: 10),
+        const CustomDividerWidget(),
       ],
     );
   }
