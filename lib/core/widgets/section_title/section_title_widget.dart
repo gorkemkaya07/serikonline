@@ -34,9 +34,9 @@ class SectionTitleWidget extends StatelessWidget {
                 "Hepsini göster",
                 style: AppTheme.sectionPrimaryColorSubtitle,
               ),
-              onPressed: () => Get.offNamed(
+              onPressed: () => Get.toNamed(
                 '/$route',
-                preventDuplicates: false,
+                id: 1
               ),
             ),
         ],

@@ -2,21 +2,18 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:serikonline/data/models/menu_card_model.dart';
-import '../../../../core/theme/app_theme.dart';
-import '../../../../core/widgets/custom_divider/custom_divider_widget.dart';
-import '../../../../core/widgets/section_title/section_title_widget.dart';
+import '../../theme/app_theme.dart';
 
-class HomeInfoWidget extends StatelessWidget {
-  const HomeInfoWidget({super.key, required this.menuList});
+class MenuCardListWidget extends StatelessWidget {
+  const MenuCardListWidget({super.key, required this.menuList, required this.route});
   final List<MenuCardModel> menuList;
+  final String route;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SectionTitleWidget(
-            title: "Bilgiler", showAll: true, route: 'info'),
         ListView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
@@ -29,21 +26,27 @@ class HomeInfoWidget extends StatelessWidget {
               text: TextSpan(text: newsItem.title, style: AppTheme.cardTitle),
               maxLines: 2,
               textDirection: TextDirection.ltr,
-            )..layout()).size.height;
+            )..layout())
+                .size
+                .height;
 
             final descriptionHeight = (TextPainter(
-              text: TextSpan(text: newsItem.description, style: AppTheme.cardDescription),
-              maxLines: 3,
+              text: TextSpan(
+                  text: newsItem.description, style: AppTheme.cardDescription),
+              maxLines: 4,
               textDirection: TextDirection.ltr,
-            )..layout()).size.height;
+            )..layout())
+                .size
+                .height;
 
-            final imageHeight = (titleHeight + descriptionHeight) * 2; // Boyutu iki katına çıkarıyoruz.
+            final imageHeight = (titleHeight + descriptionHeight) *
+                2; // Boyutu iki katına çıkarıyoruz.
 
             return GestureDetector(
-              onTap: () => _openNewsDetail(newsItem),
+              onTap: () => _openNewsDetail(newsItem,route),
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+                    const EdgeInsets.only(bottom: 15.0, left: 20.0,right: 20),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -102,12 +105,11 @@ class HomeInfoWidget extends StatelessWidget {
             );
           },
         ),
-        const CustomDividerWidget(),
       ],
     );
   }
 
-  void _openNewsDetail(MenuCardModel item) {
-    Get.toNamed('/info_detail', arguments: item);
+  void _openNewsDetail(MenuCardModel item,String route) {
+    Get.toNamed(route, arguments: item);
   }
 }

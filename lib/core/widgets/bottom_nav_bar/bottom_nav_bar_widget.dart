@@ -30,7 +30,7 @@ class BottomNavBarWidget extends GetView<BottomNavBarWidgetController> {
             controller.changePage(index);            
           },
           activeColor: AppColors.primary,
-          inactiveColor:AppColors.normalgray,
+          inactiveColor:AppColors.darkgray,
         );
       }),
     );

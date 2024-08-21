@@ -17,11 +17,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme,      
+      theme: AppTheme.lightTheme,
       initialBinding: InitialBinding(),
       initialRoute: AppRoutes.INITIAL, // İlk rota INITIAL olacak
       getPages: AppPages.pages, // Rota sayfaları burada
-      
     );
   }
 }
