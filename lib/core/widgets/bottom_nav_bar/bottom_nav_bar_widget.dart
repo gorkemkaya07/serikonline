@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:serikonline/core/theme/app_colors.dart';
-import '../../../modules/ads/views/ads_view.dart';
-import '../../../modules/home/views/home_view.dart';
-import '../../../modules/info/views/info_view.dart';
-import '../../../modules/news/views/news_view.dart';
-import '../../../modules/profile/views/profile_view.dart';
 import 'bottom_nav_bar_controller.dart';
 
 class BottomNavBarWidget extends GetView<BottomNavBarWidgetController> {
@@ -15,18 +10,11 @@ class BottomNavBarWidget extends GetView<BottomNavBarWidgetController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(() {
-        return IndexedStack(
-          index: controller.currentIndex.value,
-          children: [
-            HomeView(),
-            NewsView(),
-            AdsView(),
-            InfoView(),
-            ProfileView(),
-          ],
-        );
-      }),
+      body: Navigator(
+        key: Get.nestedKey(1),
+        initialRoute: '/home', // İlk sayfa olarak 'home' sayfasını ayarlayın
+        onGenerateRoute: controller.onGenerateRoute,
+      ),
       bottomNavigationBar: Obx(() {
         return AnimatedBottomNavigationBar(
           icons: const [
@@ -38,9 +26,11 @@ class BottomNavBarWidget extends GetView<BottomNavBarWidgetController> {
           ],
           activeIndex: controller.currentIndex.value,
           gapLocation: GapLocation.none,
-          onTap: controller.changePage,
+          onTap: (index) {
+            controller.changePage(index);            
+          },
           activeColor: AppColors.primary,
-          inactiveColor: AppColors.darkgray,
+          inactiveColor:AppColors.normalgray,
         );
       }),
     );

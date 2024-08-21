@@ -1,7 +1,12 @@
 import 'package:get/get.dart';
 import 'package:serikonline/core/bindings/initial_binding.dart';
+import 'package:serikonline/modules/ads/bindings/ads_binding.dart';
 import 'package:serikonline/modules/ads/views/ads_view.dart';
+import 'package:serikonline/modules/home/bindings/home_binding.dart';
+import 'package:serikonline/modules/info/bindings/info_binding.dart';
 import 'package:serikonline/modules/info/views/info_view.dart';
+import 'package:serikonline/modules/news/bindings/news_binding.dart';
+import 'package:serikonline/modules/profile/bindings/profile_binding.dart';
 import 'package:serikonline/modules/profile/views/profile_view.dart';
 import '../../modules/home/views/home_view.dart';
 import '../../modules/news/views/news_view.dart';
@@ -17,23 +22,28 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.HOME,
-      page: () => HomeView(),
+      page: () => const HomeView(),
+      binding: HomeBinding(),
     ),
     GetPage(
       name: AppRoutes.NEWS,
-      page: () => NewsView(),
+      page: () => const NewsView(),
+      binding: NewsBinding(),
     ),
     GetPage(
       name: AppRoutes.ADS,
       page: () => const AdsView(),
+      binding: AdsBinding(),
     ),
     GetPage(
       name: AppRoutes.INFO,
       page: () => const InfoView(),
+      binding: InfoBinding(),
     ),
     GetPage(
       name: AppRoutes.PROFILE,
       page: () => const ProfileView(),
+      binding: ProfileBinding(),
     ),
   ];
 }

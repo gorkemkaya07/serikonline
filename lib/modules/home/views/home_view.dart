@@ -7,7 +7,7 @@ import '../widgets/info_widget/home_info_widget.dart';
 import '../widgets/story_widget/home_story_list_widget.dart';
 
 class HomeView extends GetView<HomeController> {
-  HomeView({super.key});
+  const HomeView({super.key});
  
 
   @override

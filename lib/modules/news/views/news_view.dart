@@ -7,7 +7,7 @@ import '../controllers/news_controller.dart';
 import '../widgets/news_list_widget/custom_news_list_widget.dart';
 
 class NewsView extends GetView<NewsController> {
-  NewsView({super.key});
+  const NewsView({super.key});
 
   @override
   Widget build(BuildContext context) {
