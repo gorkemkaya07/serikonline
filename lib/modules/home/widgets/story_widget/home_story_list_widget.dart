@@ -23,7 +23,7 @@ class HomeStoryListWidget extends StatelessWidget {
         const SectionTitleWidget(title: 'Hikayeler',showAll: false),
       
         Padding(
-          padding: const EdgeInsets.only(left: 16.0),
+          padding: const EdgeInsets.only(left: 20.0,top: 20),
           child: SizedBox(
             height: 120, // Yükseklik ayarı
             child: ListView.builder(

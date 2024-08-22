@@ -19,7 +19,7 @@ class CustomLatestNewsWidget extends StatelessWidget {
       children: [
         const SectionTitleWidget(title: "En son haberler", showAll: true, route: 'news'),
         Padding(
-          padding: const EdgeInsets.only(left: 16.0),
+          padding: const EdgeInsets.only(left: 20.0,bottom: 20,top: 20),
           child: SizedBox(
             height: Get.height * .28,
             child: ListView.builder(
