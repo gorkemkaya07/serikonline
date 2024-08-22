@@ -75,6 +75,14 @@ class AppTheme {
     color: AppColors.normalgray,
   );
 
+    // kullanıcı bilgileri stili
+  static const TextStyle userInfo = TextStyle(
+    fontFamily: AppFonts.poppins,
+    fontWeight: FontWeight.w500, // regular
+    fontSize: 14,
+    color: AppColors.lightBlack,
+  );
+
   // TextField stili
   static final InputDecoration textFieldDecoration = InputDecoration(
     fillColor: AppColors.lightgray,
