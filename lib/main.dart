@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       initialBinding: InitialBinding(),
-      initialRoute: AppRoutes.INITIAL, // İlk rota INITIAL olacak
+      initialRoute: AppRoutes.INITIAL, // İlk rota 
       getPages: AppPages.pages, // Rota sayfaları burada
     );
   }

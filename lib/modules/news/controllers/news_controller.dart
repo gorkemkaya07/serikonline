@@ -12,45 +12,45 @@ class NewsController extends GetxController {
 
   void fetchNews() {
     news.addAll([
-      NewsModel(
-        imageUrl: 'https://via.placeholder.com/300x300.png',
-        title: "Serik'te Büyük Çevre Etkinliği",
+     NewsModel(
+        imageUrl: 'https://image.milimaj.com/i/milliyet/75/869x477/66c5e64c481b65014b092a59.jpg',
+        title: "Serik'te kan donduran olay!",
         description:
-            'Serik ilçesinde düzenlenen çevre etkinliği büyük ilgi gördü. Etkinlikte çeşitli atölyeler ve seminerler gerçekleştirildi.',
+            "Antalya'da bir düğünde eski Serik Belediyesi Başkan Yardımcısı Ziya Yıldırım'ın (63), eski ilçe belediye meclis üyesi Hasan Ali Tuncer'i (40) tabanca ile vurup öldürdüğü olayın nedeni ortaya çıktı.Olay, 18 Ağustos'ta saat 21.00 sıralarında Serik ilçesi Belkıs Mahallesi'nde meydana geldi. 2019- 2024 yılları arasında Serik Belediyesi'nde başkan yardımcılığı ve MHP'den meclis üyeliği yapan Ziya Yıldırım ile aynı tarihte yine MHP'den meclis üyesi olan Hasan Ali Tuncer arasında düğünde tartışma çıktı.Tartışma sırasında Yıldırım, ruhsatlı tabancasıyla 1 el ateş etti. Yaralanan Tuncer uzaklaşmaya çalışırken Yıldırım, 2 kez de arkasından ateş etti. Olay yerinde bir vatandaş, Yıldırım'a arkasından sarılarak durdurdu, başka bir kişi de elinden silahı aldı. Tuncer'e ilk müdahale, düğündeki bir doktor tarafından yapıldı.",
         timeAgo: '5 dakika önce',
-        locality: 'Belek Mah.',
+        locality: 'Belkıs Mah.',
       ),
       NewsModel(
-        imageUrl: 'https://via.placeholder.com/300x300.png',
-        title: 'Serik İlçesinde Yeni Konut Projeleri',
+        imageUrl: 'https://www.serikpostasi.com/resimler/2024-8/22/54900665921885.webp',
+        title: 'ATATÜRK CADDESİ TRAKTÖR GALERİSİ Mİ OLDU',
         description:
-            'Serik ilçesinde konut projeleri hızla ilerliyor. Yeni konut projeleri bölgeye değer katacak ve konut ihtiyacını karşılayacak.',
+            "İlçenin en çok kullanılan caddesi olan Atatürk caddesi her geçen gün iyiye gideceğine kötüye gitmeye başladı. Ne olacak bu caddenin sonu. İnsanlar araçlarını park edecek yer bulamazlarken, kaldırımlardan da yürüyemez hale geldi.PTT Şubesi park alanını komple parselledi. Bütün araçları PTT karşısındaki otopark ta. Orayı PTT bütün araçlarını park etsin diye yapılmadı. Sen kendi otoparkını kiraya veriyorsun, sonrada vatandaşların park edecekleri alana bütün araçlarını park ediyorsun. Vatandaşlar bu konudan çok rahatsız. Zaten tek sıra araç park etsen bile sıkıntı varken, bu şekilde sıkıntı haddinden fazla halde. Bu soruna artık bir dur denilmesi gerekiyor sanırım. BANKALAR TRAKTÖR GALERİCİLİĞİNE Mİ BAŞLADI Gelelim bankalar önündeki kaldırımlara, artık bankalarda galericilik işine başladı sanırım. Her bankanın önünde traktörler kaldırımları işgal etmiş vaziyette. Tamam traktör kredisi veriyorsunuz onu anladık ta traktörün kendisinin bankanın önünde işi ne kaldırımı neden işgal ediyor. Traktörün resmini as camına insanlar oradan görsünler. Kaldırın traktörleri kaldırımlardan da vatandaşlar rahat rahat yürüsünler.",
         timeAgo: '15 dakika önce',
-        locality: 'Kadriye Mah.',
+        locality: 'Merkez Mah.',
       ),
       NewsModel(
-        imageUrl: 'https://via.placeholder.com/300x300.png',
-        title: 'Serik Sıcak Hava Dalgasının Etkisi Altında',
+        imageUrl: 'https://www.serikpostasi.com/resimler/2024-8/20/41611086012189.webp',
+        title: 'Serik’te ABD vatandaşı otelde ölü bulundu',
         description:
-            'Serik ilçesinde sıcak hava dalgası etkisini sürdürüyor. Vatandaşlar, sıcağa karşı çeşitli önlemler alıyor.',
+           "Serik ilçesinde 5 yıldızlı bir otele tatil için gelen ABD vatandaşı otelde ölü bulundu. Serik ilçesi Belek Turizm merkezinde bulunan 5 yıldızlı bir otele tatil için gelen ABD vatandaşı Aleksandr İvanoviç (55) dün gece saat 22.00 sıralarında otel personeli tarafından otel odalarının bulunduğu koridorda yerde yatar vaziyette bulundu.Otel çalışanlarının ihbarı üzerine olay yerine sağlık ve polis ekipleri sevk edildi.Sağlık ekipleri ilk müdahalenin ardından İvanoviç’in öldüğünü belirledi. İvanoviç’in cenazesi Cumhuriyet savcısının ilk incelemesinin ardından Adli Tıp Kurumuna gönderildi. Polis ölüm sebebinin kalp krizi olduğu ihtimali üzerinde duruyor. Polisin olayla ilgili incelemesi sürüyor.",
         timeAgo: '30 dakika önce',
-        locality: 'Aksu Mah.',
-      ),
-      NewsModel(
-        imageUrl: 'https://via.placeholder.com/300x300.png',
-        title: 'Serik’te Sağlık Tarama Günleri Başladı',
-        description:
-            'Serik ilçesinde sağlık tarama günleri başladı. Vatandaşlar, çeşitli sağlık testlerinden geçerek sağlık durumlarını kontrol ettiriyor.',
-        timeAgo: '1 saat önce',
-        locality: 'Şükrü Paşa Mah.',
-      ),
-      NewsModel(
-        imageUrl: 'https://via.placeholder.com/300x300.png',
-        title: 'Serik Festivaline Yoğun İlgi',
-        description:
-            'Serik ilçesinde düzenlenen festival büyük bir kalabalık tarafından ziyaret edildi. Festivalde çeşitli etkinlikler ve konserler yapıldı.',
-        timeAgo: '2 saat önce',
         locality: 'Belek Mah.',
+      ),
+      NewsModel(
+        imageUrl: 'https://www.serikpostasi.com/resimler/2024-8/19/85371260961115.webp',
+        title: 'Serik FK 2. Hazırlık maçını da 3-0 kazandı',
+        description:
+            "TFF 2. Lig kırmızı grupta mücadele eden Serik Belediyesporun 3. Etap Afyonkarahisar kampı devam ediyor. Teknik Direktör Aziz Gökhan Geylani yönetiminde 3. Etap kamp çalışmalarını Afyonkarahisar da sürdüren Serik FK, 3. Lig ekiplerinden Eti Gübre Mazıdağı spor ile hazırlık maçı yaptı. Serik FK, 7. Dakikada Berk İsmail Ünsal, 39. Dakikada Cem Ekinci ve 50. Dakikada  Alihan Kubalas’ın attığı gollerle maçı 3-0 kazandı. Serik FK Afyon kampının ardından 1 Eylül Pazar günü saat 16.30 da TCDD Ankara Demirspor stadından Ankara Demirspor karşısında ligin ilk maçına çıkacak.",
+        timeAgo: '1 saat önce',
+        locality: 'Akçaalan Mah.',
+      ),
+      NewsModel(
+        imageUrl: 'https://www.serikpostasi.com/resimler/2024-8/17/56348754975077.webp',
+        title: 'Serik’te çıkan orman yangını söndürüldü',
+        description:
+            'Antalya’nın Serik ilçesinde ormanlık alanda çıkan yangın söndürüldü. Yangın gece saat 23.00 sıralarında Serik ilçesi Sarıabalı mahallesi Terziler mevkiinde bulunan ormanlık alanda bilinmeyen bir nedenle yangın çıktı. Çevrede oturan mahalle sakinlerinin ihbarı üzerine olay yerine Büyükşehir belediyesi itfaiye, Orman İşletme Müdürlüğüne ait arasözler ile Jandarma ekipleri sevk edildi. Yangına Orman işletme müdürlüğünden 9 arasöz, 4 su tankeri, 1 dozer, 1 kepçe, 4 ilk müdahale aracı, 70 yangın söndürme personeli, Büyükşehir belediyesine ait 2 itfaiye ile 2 su tankeri müdahale etti. Yangın ekiplerin müdahalesi sonucu 3 saatte söndürüldü. Yangında 0.5 hektar ormanlık alan, 5 dönüm zeytin ve meyve bahçesi ile bahçe içerisinde bulunan bir baraka yanarak zarar gördü. Yangın yakında bulunan ev ve seralara sıçramadan söndürülürken, evlerde oturan vatandaşlar büyük tedirginlik yaşadı. Vatandaşlar da yangının evlerine sıçramaması için ilaçlama motoru ve hortumlarla yangına müdahale etti. Orman İşletme Müdürü Hüseyin Oğuzhan Okudan, AK Parti Serik İlçe Başkanı Ahmet Söker ile MHP Serik ilçe başkanı Osman Üstünmet’te yangın yerinde incelemelerde bulundu. Yangın hakkında bilgi veren Sarıabalı mahallesi sakinlerinden Ramazan Büyükdeligöz, “Gece çocuklar yangın var diye seslendi. Dışarıya çıktım ağaçlar birden alev aldı. Ne olduğunu bende bilemedim. Arasözler geldi yangına müdahale etti. Yangını söndürdüler.” Diyerek konuştu.',
+        timeAgo: '2 saat önce',
+        locality: 'Sarıabalı Mah.',
       ),
     ]);
   }
