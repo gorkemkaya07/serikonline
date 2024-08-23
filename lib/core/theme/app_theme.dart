@@ -19,13 +19,12 @@ class AppTheme {
     color: AppColors.black,
     letterSpacing: 0.5, // Karakterler arası çok az boşluk
   );
-    static const TextStyle storyTitle = TextStyle(
+  static const TextStyle storyTitle = TextStyle(
     fontFamily: AppFonts.poppins,
     fontWeight: FontWeight.w400, // regular
     fontSize: 12,
     color: AppColors.black,
   );
-
 
   // Section başlık stili
   static const TextStyle sectionTitle = TextStyle(
@@ -75,7 +74,7 @@ class AppTheme {
     color: AppColors.normalgray,
   );
 
-    // kullanıcı bilgileri stili
+  // kullanıcı bilgileri stili
   static const TextStyle userInfo = TextStyle(
     fontFamily: AppFonts.poppins,
     fontWeight: FontWeight.w500, // regular
@@ -98,5 +97,20 @@ class AppTheme {
       color: AppColors.textFieldText,
     ),
     contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
+  );
+
+  // TextField Başlık stili
+  static const TextStyle textFieldTitle = TextStyle(
+    fontFamily: AppFonts.poppins,
+    fontWeight: FontWeight.w500, // medium
+    fontSize: 14,
+    color: AppColors.darkgray,
+  );
+  // Custom Button Yazı stili
+  static const TextStyle buttonText = TextStyle(
+    fontFamily: AppFonts.poppins,
+    fontWeight: FontWeight.w600, // semibold
+    fontSize: 14,
+    color: Colors.white,
   );
 }

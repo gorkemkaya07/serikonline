@@ -11,7 +11,7 @@ class BottomNavBarWidget extends GetView<BottomNavBarWidgetController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Navigator(
-        key: Get.nestedKey(1),
+        key: Get.nestedKey(5),
         initialRoute: '/home', // İlk sayfa olarak 'home' sayfasını ayarlayın
         onGenerateRoute: controller.onGenerateRoute,
       ),

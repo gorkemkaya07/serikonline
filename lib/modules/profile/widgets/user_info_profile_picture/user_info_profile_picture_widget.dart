@@ -6,7 +6,7 @@ class UserInfoProfilePictureWidget extends StatelessWidget {
   const UserInfoProfilePictureWidget({
     super.key,
   });
-
+ 
   @override
   Widget build(BuildContext context) {
     return const Column(

@@ -18,7 +18,7 @@ class BottomNavBarWidgetController extends GetxController {
   var counter = 0.obs;
   void changePage(int index) {
     currentIndex.value = index;
-    Get.offAllNamed(pages[index], id: 1);
+    Get.offAllNamed(pages[index], id: 5);
   }
 
   Route? onGenerateRoute(RouteSettings settings) {
