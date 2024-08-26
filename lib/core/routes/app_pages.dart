@@ -8,20 +8,24 @@ import 'package:serikonline/modules/info/views/info_view.dart';
 import 'package:serikonline/modules/news/bindings/news_binding.dart';
 import 'package:serikonline/modules/profile/bindings/profile_binding.dart';
 import 'package:serikonline/modules/profile/bindings/profile_user_ads_binding.dart';
+import 'package:serikonline/modules/profile/views/profile_user_active_comments_view.dart';
 import 'package:serikonline/modules/profile/views/profile_user_ads_view.dart';
+import 'package:serikonline/modules/profile/views/profile_user_inactive_comments_view.dart';
 import 'package:serikonline/modules/profile/views/profile_user_info_view.dart';
 import 'package:serikonline/modules/profile/views/profile_view.dart';
 import '../../modules/home/views/home_view.dart';
 import '../../modules/news/views/news_view.dart';
 import '../../modules/profile/bindings/profile_contact_us_binding.dart';
-import '../../modules/profile/bindings/profile_notification_settings_binding.dart';
+import '../../modules/profile/bindings/profile_user_active_ads_binding.dart';
+import '../../modules/profile/bindings/profile_user_active_comments_binding.dart';
 import '../../modules/profile/bindings/profile_user_comments_binding.dart';
-import '../../modules/profile/bindings/profile_user_cv_binding.dart';
+import '../../modules/profile/bindings/profile_user_inactive_ads_binding.dart';
+import '../../modules/profile/bindings/profile_user_inactive_comments_binding.dart';
 import '../../modules/profile/bindings/profile_user_info_binding.dart';
 import '../../modules/profile/views/profile_contact_us_view.dart';
-import '../../modules/profile/views/profile_notification_settings_view.dart';
+import '../../modules/profile/views/profile_user_active_ads_view.dart';
 import '../../modules/profile/views/profile_user_comments_view.dart';
-import '../../modules/profile/views/profile_user_cv_view.dart';
+import '../../modules/profile/views/profile_user_inactive_ads_view.dart';
 import '../widgets/bottom_nav_bar/bottom_nav_bar_widget.dart';
 import 'app_routes.dart';
 
@@ -31,61 +35,85 @@ class AppPages {
       name: AppRoutes.INITIAL,
       page: () => const BottomNavBarWidget(), // İlk sayfa BottomNavBarWidget
       binding: InitialBinding(),
+      transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.HOME,
       page: () => const HomeView(),
       binding: HomeBinding(),
+      transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.NEWS,
       page: () => const NewsView(),
       binding: NewsBinding(),
+      transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.ADS,
       page: () => const AdsView(),
       binding: AdsBinding(),
+      transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.INFO,
       page: () => const InfoView(),
       binding: InfoBinding(),
+      transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.PROFILE,
       page: () => const ProfileView(),
       binding: ProfileBinding(),
+      transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.PROFILE_USER_INFO,
-      page: () =>   ProfileUserInfoView(),
+      page: () => ProfileUserInfoView(),
       binding: ProfileUserInfoBinding(),
+      transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.PROFILE_USER_ADS,
       page: () => const ProfileUserAdsView(),
       binding: ProfileUserAdsBinding(),
-    ),
-    GetPage(
-      name: AppRoutes.PROFILE_USER_CV,
-      page: () => const ProfileUserCvView(),
-      binding: ProfileUserCVBinding(),
+      transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.PROFILE_USER_COMMENTS,
       page: () => const ProfileUserCommentsView(),
       binding: ProfileUserCommentsBinding(),
-    ),
-    GetPage(
-      name: AppRoutes.PROFILE_NOTIFICATION_SETTINGS,
-      page: () => const ProfileNotificationSettingsView(),
-      binding: ProfileNotificationSettingsBinding(),
+      transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.PROFILE_CONTACT_US,
-      page: () => const ProfileContactUsView(),
+      page: () => ProfileContactUsView(),
       binding: ProfileContactUsBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.PROFILE_USER_ACTIVE_COMMENTS,
+      page: () => ProfileUserActiveCommentsView(),
+      binding: ProfileUserActiveCommentsBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.PROFILE_USER_INACTIVE_COMMENTS,
+      page: () => ProfileUserInActiveCommentsView(),
+      binding: ProfileUserInActiveCommentsBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.PROFILE_USER_ACTIVE_ADS,
+      page: () => ProfileUserActiveAdsView(),
+      binding: ProfileUserActiveAdsBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.PROFILE_USER_INACTIVE_ADS,
+      page: () => ProfileUserInActiveAdsView(),
+      binding: ProfileUserInActiveAdsBinding(),
+      transition: Transition.cupertino,
     ),
   ];
 }

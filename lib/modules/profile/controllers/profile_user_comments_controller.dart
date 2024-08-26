@@ -1,3 +1,19 @@
 import 'package:get/get.dart';
 
-class ProfileUserCommentsController extends GetxController {}
+import '../../../data/models/profile_menu_model.dart';
+
+class ProfileUserCommentsController extends GetxController {
+  final List<ProfileMenuModel> profileMenuList = [];
+  @override
+  void onInit() {
+    super.onInit();
+    fetchProfileMenuList();
+  }
+
+  void fetchProfileMenuList() {
+    profileMenuList.addAll([
+      ProfileMenuModel('Yayında olanlar', '/profile_user_active_comments'),
+      ProfileMenuModel('Yayında olmayanlar', '/profile_user_inactive_comments'),
+    ]);
+  }
+}

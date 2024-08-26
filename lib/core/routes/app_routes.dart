@@ -9,8 +9,10 @@ class AppRoutes {
   static const PROFILE = '/profile';
   static const PROFILE_USER_INFO = '/profile_user_info';
   static const PROFILE_USER_ADS = '/profile_user_ads';
-  static const PROFILE_USER_CV = '/profile_user_cv';
   static const PROFILE_USER_COMMENTS = '/profile_user_comments';
-  static const PROFILE_NOTIFICATION_SETTINGS = '/profile_notification_settings';
   static const PROFILE_CONTACT_US = '/profile_contact_us';
+  static const PROFILE_USER_ACTIVE_COMMENTS = '/profile_user_active_comments';
+  static const PROFILE_USER_INACTIVE_COMMENTS = '/profile_user_inactive_comments';
+  static const PROFILE_USER_ACTIVE_ADS = '/profile_user_active_ads';
+  static const PROFILE_USER_INACTIVE_ADS = '/profile_user_inactive_ads';
 }

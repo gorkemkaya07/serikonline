@@ -14,7 +14,6 @@ class ProfileController extends GetxController {
       ProfileMenuModel('Kullanıcı Bilgileri', '/profile_user_info'),
       ProfileMenuModel('Kullanıcı ilanları', '/profile_user_ads'),
       ProfileMenuModel('Kullanıcı Yorumları', '/profile_user_comments'),
-      ProfileMenuModel('Bildirim Ayarları', '/profile_notification_settings'),
       ProfileMenuModel('Bize Ulaşın', '/profile_contact_us')
     ]);
   }
