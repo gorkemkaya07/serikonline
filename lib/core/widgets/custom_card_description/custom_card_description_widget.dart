@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:serikonline/core/theme/app_colors.dart';
 
 import '../../theme/app_theme.dart';
 
@@ -14,7 +15,7 @@ class CustomCardDescription extends StatelessWidget {
       description,
       maxLines: 3,
       overflow: TextOverflow.ellipsis,
-      style: AppTheme.cardDescription,
+      style: AppTheme.cardDescription.copyWith(color:AppColors.darkgray),
     );
   }
 }

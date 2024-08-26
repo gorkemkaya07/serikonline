@@ -18,7 +18,7 @@ class CustomCardWithIconTextWidget extends StatelessWidget {
       children: [
         Icon(icon, size: 18, color: AppColors.darkgray),
         const SizedBox(width: 4),
-        Text(text, style: AppTheme.cardDescription),
+        Text(text, style: AppTheme.cardDescription.copyWith(color: AppColors.darkgray)),
       ],
     );
   }
