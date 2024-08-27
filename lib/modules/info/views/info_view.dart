@@ -13,13 +13,7 @@ class InfoView extends GetView<InfoController> {
         appBar: const CustomAppBarWidget(),
         body: SingleChildScrollView(
           child: Column(
-            children: [
-            
-              MenuCardListWidget(
-                menuList: controller.list,
-                route: '/info_detail',
-              )
-            ],
+            children: [MenuCardListWidget(menuList: controller.list)],
           ),
         ));
   }

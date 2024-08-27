@@ -15,32 +15,29 @@ class SectionTitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 16,right: 16, top: 20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            title,
-            style: AppTheme.sectionTitle,
-          ),
-          if (showAll)
-            TextButton(
-              style: TextButton.styleFrom(
-                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                  padding: const EdgeInsets.all(0),
-                  minimumSize: Size.zero),
-              child: const Text(
-                "Hepsini göster",
-                style: AppTheme.sectionPrimaryColorSubtitle,
-              ),
-              onPressed: () => Get.toNamed(
-                '/$route',
-                id: 1
-              ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          title,
+          style: AppTheme.sectionTitle,
+        ),
+        if (showAll)
+          TextButton(
+            style: TextButton.styleFrom(
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                padding: const EdgeInsets.all(0),
+                minimumSize: Size.zero),
+            child: const Text(
+              "Hepsini göster",
+              style: AppTheme.sectionPrimaryColorSubtitle,
             ),
-        ],
-      ),
+            onPressed: () => Get.toNamed(
+              '/$route',
+              id: 1
+            ),
+          ),
+      ],
     );
   }
 }

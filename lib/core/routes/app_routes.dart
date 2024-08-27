@@ -15,4 +15,8 @@ class AppRoutes {
   static const PROFILE_USER_INACTIVE_COMMENTS = '/profile_user_inactive_comments';
   static const PROFILE_USER_ACTIVE_ADS = '/profile_user_active_ads';
   static const PROFILE_USER_INACTIVE_ADS = '/profile_user_inactive_ads';
+  static const INFO_ON_DUTY_PHARMACY = '/info_on_duty_pharmacy';
+  static const INFO_MARKET_PRICES = '/info_market_prices';
+  static const INFO_CURRENCY_EXCHANGE_RATES = '/info_currency_exchange_rates';
+  static const INFO_BUS_PRICES = '/info_bus_prices';
 }

@@ -6,10 +6,8 @@ import 'package:serikonline/data/models/menu_card_model.dart';
 import '../../theme/app_theme.dart';
 
 class MenuCardListWidget extends StatelessWidget {
-  const MenuCardListWidget(
-      {super.key, required this.menuList, required this.route});
+  const MenuCardListWidget({super.key, required this.menuList});
   final List<MenuCardModel> menuList;
-  final String route;
 
   @override
   Widget build(BuildContext context) {
@@ -33,24 +31,21 @@ class MenuCardListWidget extends StatelessWidget {
                 .height;
 
             final descriptionHeight = (TextPainter(
-              text: TextSpan(
-                  text: newsItem.description, style: AppTheme.cardDescription),
+              text: TextSpan(text: newsItem.description, style: AppTheme.cardDescription),
               maxLines: 4,
               textDirection: TextDirection.ltr,
             )..layout())
                 .size
                 .height;
 
-            final imageHeight = (titleHeight + descriptionHeight) *
-                2; // Boyutu iki katına çıkarıyoruz.
+            final imageHeight = (titleHeight + descriptionHeight) * 2; // Boyutu iki katına çıkarıyoruz.
 
             return InkWell(
-              onTap: () => _openNewsDetail(newsItem, route),
+              onTap: () => _openNewsDetail(newsItem, menuList[index].route!),
               child: Column(
                 children: [
                   Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -74,7 +69,6 @@ class MenuCardListWidget extends StatelessWidget {
                                 maxLines: 3,
                                 overflow: TextOverflow.ellipsis,
                               ),
-                         
                             ],
                           ),
                         ),
@@ -87,7 +81,9 @@ class MenuCardListWidget extends StatelessWidget {
                             height: imageHeight,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(13),
-                              boxShadow: [BoxShadow(blurRadius: 30,offset: const Offset(0, 4),color: Colors.black.withOpacity(.1),spreadRadius: 5)],
+                              boxShadow: [
+                                BoxShadow(blurRadius: 30, offset: const Offset(0, 4), color: Colors.black.withOpacity(.1), spreadRadius: 5)
+                              ],
                               image: DecorationImage(
                                 image: imageProvider,
                                 fit: BoxFit.cover,
@@ -102,13 +98,12 @@ class MenuCardListWidget extends StatelessWidget {
                               borderRadius: BorderRadius.circular(13),
                             ),
                           ),
-                          errorWidget: (context, url, error) =>
-                              const Icon(Icons.error),
+                          errorWidget: (context, url, error) => const Icon(Icons.error),
                         ),
                       ],
                     ),
                   ),
-                       CustomDividerWidget()
+                  const CustomDividerWidget()
                 ],
               ),
             );

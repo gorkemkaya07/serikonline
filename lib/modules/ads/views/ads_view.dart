@@ -13,7 +13,7 @@ class AdsView extends GetView<AdsController> {
         appBar: const CustomAppBarWidget(),
         body: Column(
           children: [
-              MenuCardListWidget(menuList: controller.list, route: '/test')
+              MenuCardListWidget(menuList: controller.list)
           ],
         ));
   }

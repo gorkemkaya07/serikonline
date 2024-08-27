@@ -23,7 +23,7 @@ class HomeView extends GetView<HomeController> {
                   title: "Güncel Bilgiler", showAll: true),
               MenuCardListWidget(
                 menuList: controller.info,
-                route: '/info_detail',
+               
               )
             ],
           ),

@@ -4,6 +4,14 @@ import 'package:serikonline/modules/ads/bindings/ads_binding.dart';
 import 'package:serikonline/modules/ads/views/ads_view.dart';
 import 'package:serikonline/modules/home/bindings/home_binding.dart';
 import 'package:serikonline/modules/info/bindings/info_binding.dart';
+import 'package:serikonline/modules/info/bindings/info_bus_prices_binding.dart';
+import 'package:serikonline/modules/info/bindings/info_currency_exchange_rates_binding.dart';
+import 'package:serikonline/modules/info/bindings/info_market_prices_binding.dart';
+import 'package:serikonline/modules/info/bindings/info_on_duty_pharmacy_binding.dart';
+import 'package:serikonline/modules/info/views/info_bus_prices_view.dart';
+import 'package:serikonline/modules/info/views/info_currency_exchange_rates_view.dart';
+import 'package:serikonline/modules/info/views/info_market_prices_view.dart';
+import 'package:serikonline/modules/info/views/info_on_duty_pharmacy_view.dart';
 import 'package:serikonline/modules/info/views/info_view.dart';
 import 'package:serikonline/modules/news/bindings/news_binding.dart';
 import 'package:serikonline/modules/profile/bindings/profile_binding.dart';
@@ -113,6 +121,30 @@ class AppPages {
       name: AppRoutes.PROFILE_USER_INACTIVE_ADS,
       page: () => ProfileUserInActiveAdsView(),
       binding: ProfileUserInActiveAdsBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.INFO_ON_DUTY_PHARMACY,
+      page: () => InfoOnDutyPharmacyView(),
+      binding: InfoOnDutyPharmacyBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.INFO_MARKET_PRICES,
+      page: () => InfoMarketPricesView(),
+      binding: InfoMarketPricesBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.INFO_CURRENCY_EXCHANGE_RATES,
+      page: () => InfoCurrencyExchangeRatesView(),
+      binding: InfoCurrencyExchangeRatesBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.INFO_BUS_PRICES,
+      page: () => InfoBusPricesView(),
+      binding: InfoBusPricesBinding(),
       transition: Transition.cupertino,
     ),
   ];
