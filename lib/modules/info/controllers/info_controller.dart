@@ -32,7 +32,7 @@ class InfoController extends GetxController {
         description:
             'Normal çalışma saatleri dışında hizmet veren ve acil ilaç ihtiyaçlarını karşılayan nöbetçi eczaneler günlük olarak güncellenmektedir.',
         imageUrl:
-            'https://www.alnusyatirim.com/static/uploads/2021/doviz-nedir.jpeg',
+            'https://static.daktilo.com/sites/1059/uploads/2024/06/20/large/pexels-pixabay-164527-1717427634.webp',
             route: '/info_currency_exchange_rates'
       ),
                MenuCardModel(

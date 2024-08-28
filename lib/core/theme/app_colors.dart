@@ -9,4 +9,8 @@ class AppColors {
   static const Color textFieldText = Color(0xFF828282);
   static const Color darkgray = Color(0xFF828282);
   static const Color lightBlack = Color(0xFF5A5A5A);
+  static const Color lightRed = Color(0xFFFD343E);
+  static const Color lightOrange = Color(0xFFFF8237);
+  static const Color lightGreen = Color(0xFF2ABA27);
+  static const Color navyBlue = Color(0xFF2774BA);
 }
