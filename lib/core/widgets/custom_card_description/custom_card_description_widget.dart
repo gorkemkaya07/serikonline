@@ -7,15 +7,17 @@ class CustomCardDescription extends StatelessWidget {
   const CustomCardDescription({
     super.key,
     required this.description,
+    required this.lines,
   });
+  final int lines;
   final String description;
   @override
   Widget build(BuildContext context) {
     return Text(
       description,
-      maxLines: 3,
+      maxLines: lines,
       overflow: TextOverflow.ellipsis,
-      style: AppTheme.cardDescription.copyWith(color:AppColors.darkgray),
+      style: AppTheme.cardDescription.copyWith(color: AppColors.darkgray),
     );
   }
 }

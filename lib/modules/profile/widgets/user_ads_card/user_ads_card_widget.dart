@@ -32,36 +32,27 @@ class UserAdsCardWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
-                      padding:
-                          const EdgeInsets.only(left: 20.0, right: 20, top: 15),
+                      padding: const EdgeInsets.only(left: 20.0, right: 20, top: 15),
                       child: SizedBox(
                         height: 80,
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            CustomImageWidget(
-                                imgUrl: adsList[index].imageUrl,
-                                sizeWidth: 80,
-                                sizeHeight: 80,
-                                sizeBorderRadius: 13),
+                            CustomImageWidget(imgUrl: adsList[index].imageUrl, sizeWidth: 80, sizeHeight: 80, sizeBorderRadius: 13),
                             Expanded(
                               child: Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 12.0, right: 5),
+                                padding: const EdgeInsets.only(left: 12.0, right: 5),
                                 child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    CustomCardTitle(
-                                        title: adsList[index].title),
+                                    CustomCardTitle(title: adsList[index].title),
                                     CustomCardDescription(
-                                        description: adsList[index].company),
-                                    CustomCardWithIconTextWidget(
-                                        text:
-                                            adsList[index].views.toString(),
-                                        icon: Icons.visibility_outlined),
+                                      description: adsList[index].company,
+                                      lines: 1,
+                                    ),
+                                    CustomCardWithIconTextWidget(text: adsList[index].views.toString(), icon: Icons.visibility_outlined),
                                   ],
                                 ),
                               ),
@@ -69,17 +60,14 @@ class UserAdsCardWidget extends StatelessWidget {
                             SizedBox(
                               height: 80,
                               child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  InkWell(
-                                      onTap: () {},
-                                      child: const Icon(Icons.more_horiz)),
-                                       CustomCardWithIconTextWidget(
-                                          text: adsList[index].location,
-                                          icon: Icons.location_on_outlined,
-                                        ),
+                                  InkWell(onTap: () {}, child: const Icon(Icons.more_horiz)),
+                                  CustomCardWithIconTextWidget(
+                                    text: adsList[index].location,
+                                    icon: Icons.location_on_outlined,
+                                  ),
                                 ],
                               ),
                             ),

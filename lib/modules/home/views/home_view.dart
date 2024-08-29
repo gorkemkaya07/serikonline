@@ -19,7 +19,10 @@ class HomeView extends GetView<HomeController> {
             children: [
               HomeStoryListWidget(stories: controller.stories),
               CustomLatestNewsWidget(newsList: controller.news),
-              const SectionTitleWidget(title: "Güncel Bilgiler", showAll: true),
+              const Padding(
+                padding: EdgeInsets.only(top: 15.0, left: 20, right: 20),
+                child: SectionTitleWidget(title: "Güncel Bilgiler", showAll: true),
+              ),
               MenuCardListWidget(
                 menuList: controller.info,
               )
@@ -28,4 +31,3 @@ class HomeView extends GetView<HomeController> {
         ));
   }
 }
- 

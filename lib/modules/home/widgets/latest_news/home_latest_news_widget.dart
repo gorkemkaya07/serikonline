@@ -17,9 +17,12 @@ class CustomLatestNewsWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SectionTitleWidget(title: "En son haberler", showAll: true, route: 'news'),
+        const Padding(
+          padding: EdgeInsets.only(top: 15.0, left: 20, right: 20),
+          child: SectionTitleWidget(title: "En son haberler", showAll: true, route: 'news'),
+        ),
         Padding(
-          padding: const EdgeInsets.only(left: 20.0,bottom: 20,top: 20),
+          padding: const EdgeInsets.only(left: 20.0, bottom: 20, top: 20),
           child: SizedBox(
             height: Get.height * .28,
             child: ListView.builder(
@@ -48,8 +51,7 @@ class CustomLatestNewsWidget extends StatelessWidget {
                               ),
                             ),
                           ),
-                          errorWidget: (context, url, error) =>
-                              const Icon(Icons.error),
+                          errorWidget: (context, url, error) => const Icon(Icons.error),
                         ),
                         const SizedBox(height: 8),
                         // Başlık

@@ -15,7 +15,10 @@ class NewsView extends GetView<NewsController> {
       appBar: const CustomAppBarWidget(),
       body: Column(
         children: [
-          const SectionTitleWidget(title: "Haberler", showAll: false),
+          const Padding(
+            padding: EdgeInsets.only(top: 15.0, left: 20, right: 20),
+            child: SectionTitleWidget(title: "Haberler", showAll: false),
+          ),
           const CustomSearchBarWidget(title: "Haber ara"),
           CustomNewsListWidget(newsList: controller.news),
         ],

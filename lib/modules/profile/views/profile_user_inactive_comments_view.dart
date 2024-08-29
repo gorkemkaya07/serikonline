@@ -12,7 +12,7 @@ class ProfileUserInActiveCommentsView extends GetView<ProfileUserInActiveComment
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBarWidget(),
-      body: CommentListingCardWidget(commentList: controller.commentList),
+      body: CommentListingCardWidget(commentList: controller.commentList,seeMore: false,),
     );
   }
 }

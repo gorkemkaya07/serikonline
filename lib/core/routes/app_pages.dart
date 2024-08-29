@@ -14,6 +14,8 @@ import 'package:serikonline/modules/info/views/info_market_prices_view.dart';
 import 'package:serikonline/modules/info/views/info_on_duty_pharmacy_view.dart';
 import 'package:serikonline/modules/info/views/info_view.dart';
 import 'package:serikonline/modules/news/bindings/news_binding.dart';
+import 'package:serikonline/modules/news/bindings/news_detail_binding.dart';
+import 'package:serikonline/modules/news/views/news_detail_view.dart';
 import 'package:serikonline/modules/profile/bindings/profile_binding.dart';
 import 'package:serikonline/modules/profile/bindings/profile_user_ads_binding.dart';
 import 'package:serikonline/modules/profile/views/profile_user_active_comments_view.dart';
@@ -95,43 +97,43 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.PROFILE_CONTACT_US,
-      page: () => ProfileContactUsView(),
+      page: () => const ProfileContactUsView(),
       binding: ProfileContactUsBinding(),
       transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.PROFILE_USER_ACTIVE_COMMENTS,
-      page: () => ProfileUserActiveCommentsView(),
+      page: () => const ProfileUserActiveCommentsView(),
       binding: ProfileUserActiveCommentsBinding(),
       transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.PROFILE_USER_INACTIVE_COMMENTS,
-      page: () => ProfileUserInActiveCommentsView(),
+      page: () => const ProfileUserInActiveCommentsView(),
       binding: ProfileUserInActiveCommentsBinding(),
       transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.PROFILE_USER_ACTIVE_ADS,
-      page: () => ProfileUserActiveAdsView(),
+      page: () => const ProfileUserActiveAdsView(),
       binding: ProfileUserActiveAdsBinding(),
       transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.PROFILE_USER_INACTIVE_ADS,
-      page: () => ProfileUserInActiveAdsView(),
+      page: () => const ProfileUserInActiveAdsView(),
       binding: ProfileUserInActiveAdsBinding(),
       transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.INFO_ON_DUTY_PHARMACY,
-      page: () => InfoOnDutyPharmacyView(),
+      page: () => const InfoOnDutyPharmacyView(),
       binding: InfoOnDutyPharmacyBinding(),
       transition: Transition.cupertino,
     ),
     GetPage(
       name: AppRoutes.INFO_MARKET_PRICES,
-      page: () => InfoMarketPricesView(),
+      page: () => const InfoMarketPricesView(),
       binding: InfoMarketPricesBinding(),
       transition: Transition.cupertino,
     ),
@@ -143,8 +145,14 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.INFO_BUS_PRICES,
-      page: () => InfoBusPricesView(),
+      page: () => const InfoBusPricesView(),
       binding: InfoBusPricesBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.NEWS_DETAIL,
+      page: () => const NewsDetailView(),
+      binding: NewsDetailBinding(),
       transition: Transition.cupertino,
     ),
   ];

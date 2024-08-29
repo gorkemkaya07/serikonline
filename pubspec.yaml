@@ -16,6 +16,7 @@ dependencies:
   get: ^4.6.6
   url_launcher: ^6.3.0
   timeago: ^3.7.0
+  carousel_slider: ^5.0.0
 
 dev_dependencies:
   flutter_test:

@@ -50,6 +50,7 @@ class BottomNavBarWidgetController extends GetxController {
       case '/profile':
         return GetPageRoute(
             settings: settings,
+            // ignore: prefer_const_constructors
             page: () => ProfileView(),
             binding: ProfileBinding(),
             transition: Transition.noTransition);

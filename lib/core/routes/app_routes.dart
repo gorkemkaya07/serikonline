@@ -19,4 +19,5 @@ class AppRoutes {
   static const INFO_MARKET_PRICES = '/info_market_prices';
   static const INFO_CURRENCY_EXCHANGE_RATES = '/info_currency_exchange_rates';
   static const INFO_BUS_PRICES = '/info_bus_prices';
+  static const NEWS_DETAIL = '/news_detail';
 }

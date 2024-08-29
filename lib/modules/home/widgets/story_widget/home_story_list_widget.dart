@@ -19,11 +19,12 @@ class HomeStoryListWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        
-        const SectionTitleWidget(title: 'Hikayeler',showAll: false),
-      
+        const Padding(
+          padding: EdgeInsets.only(top: 15.0, left: 20, right: 20),
+          child: SectionTitleWidget(title: 'Hikayeler', showAll: false),
+        ),
         Padding(
-          padding: const EdgeInsets.only(left: 20.0,top: 20),
+          padding: const EdgeInsets.only(left: 20.0, top: 20),
           child: SizedBox(
             height: 120, // Yükseklik ayarı
             child: ListView.builder(
@@ -39,20 +40,17 @@ class HomeStoryListWidget extends StatelessWidget {
                       children: [
                         CircleAvatar(
                           radius: 35,
-                          backgroundImage:
-                              CachedNetworkImageProvider(story.imageUrl),
+                          backgroundImage: CachedNetworkImageProvider(story.imageUrl),
                         ),
                         const SizedBox(height: 5),
                         SizedBox(
-                          width:
-                              70, // CircleAvatar'ın genişliğine uygun olarak ayarlayın
+                          width: 70, // CircleAvatar'ın genişliğine uygun olarak ayarlayın
                           child: Text(
                             story.title,
                             style: AppTheme.storyTitle,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.center, // Yazıyı ortalayın
-                            maxLines:
-                                2, // Yazının 2 satırdan fazla olmamasını sağlayın
+                            maxLines: 2, // Yazının 2 satırdan fazla olmamasını sağlayın
                           ),
                         ),
                       ],

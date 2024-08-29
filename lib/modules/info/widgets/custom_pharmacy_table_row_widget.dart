@@ -10,25 +10,47 @@ class CustomPharmacyTableRowWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Table(
+      columnWidths: const {
+        0: FlexColumnWidth(1),
+        1: FlexColumnWidth(1.5),
+        2: FlexColumnWidth(1.5),
+      },
+      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
       border: TableBorder.all(color: AppColors.normalgray.withOpacity(.5)),
       children: [
         TableRow(
           children: [
-            _buildPharmacyRowCell(name: rowText1),
-            _buildPharmacyRowCell(name: rowText2),
+            TableCell(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Gül Eczanesi',
+                  style: AppTheme.cardDescription.copyWith(color: AppColors.darkgray),
+                ),
+              ),
+            ),
+            TableCell(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Cumhuriyet Mahallesi, Hürriyet Caddesi, Akıl Apt. No:13/a Serik/Antalya',
+                  style: AppTheme.cardDescription.copyWith(color: AppColors.darkgray),
+                ),
+              ),
+            ),
+            TableCell(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  '0 (242) 712-58-85',
+                  style: AppTheme.cardDescription.copyWith(color: AppColors.darkgray),
+                ),
+              ),
+            ),
           ],
         ),
       ],
     );
   }
 }
-
-Widget _buildPharmacyRowCell({required String name}) {
-  return Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Text(
-      name,
-      style: AppTheme.cardDescription.copyWith(color: AppColors.darkgray, fontWeight: FontWeight.w500),
-    ),
-  );
-}
+ 
