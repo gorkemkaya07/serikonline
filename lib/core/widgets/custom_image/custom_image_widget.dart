@@ -17,35 +17,39 @@ class CustomImageWidget extends StatelessWidget {
   final double sizeBorderRadius;
   @override
   Widget build(BuildContext context) {
-    return CachedNetworkImage(
-      imageUrl: imgUrl,
-      imageBuilder: (context, imageProvider) => Container(
-        width: sizeWidth,
-        height: sizeHeight,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(sizeBorderRadius),
-          boxShadow: [
-            BoxShadow(
-                blurRadius: 30,
-                offset: const Offset(0, 4),
-                color: Colors.black.withOpacity(.1),
-                spreadRadius: 5)
-          ],
-          image: DecorationImage(
-            image: imageProvider,
-            fit: BoxFit.cover,
+    return SizedBox(
+      width: sizeWidth,
+      height: sizeHeight,
+      child: CachedNetworkImage(
+        imageUrl: imgUrl,
+        imageBuilder: (context, imageProvider) => Container(
+          width: sizeWidth,
+          height: sizeHeight,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(sizeBorderRadius),
+            boxShadow: [
+              BoxShadow(
+                  blurRadius: 30,
+                  offset: const Offset(0, 4),
+                  color: Colors.black.withOpacity(.1),
+                  spreadRadius: 5)
+            ],
+            image: DecorationImage(
+              image: imageProvider,
+              fit: BoxFit.cover,
+            ),
           ),
         ),
-      ),
-      placeholder: (context, url) => Container(
-        width: sizeWidth,
-        height: sizeHeight,
-        decoration: BoxDecoration(
-          color: AppColors.lightgray,
-          borderRadius: BorderRadius.circular(sizeBorderRadius),
+        placeholder: (context, url) => Container(
+          width: sizeWidth,
+          height: sizeHeight,
+          decoration: BoxDecoration(
+            color: AppColors.lightgray,
+            borderRadius: BorderRadius.circular(sizeBorderRadius),
+          ),
         ),
+        errorWidget: (context, url, error) => const Icon(Icons.error),
       ),
-      errorWidget: (context, url, error) => const Icon(Icons.error),
     );
   }
 }

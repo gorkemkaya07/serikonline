@@ -7,8 +7,7 @@ class AppTheme {
   // App bar başlık stili
 
   static final ThemeData lightTheme = ThemeData(
-    scaffoldBackgroundColor:
-        Colors.white, // Arka plan rengini beyaz olarak ayarla
+    scaffoldBackgroundColor: Colors.white, // Arka plan rengini beyaz olarak ayarla
     fontFamily: AppFonts.poppins, // Varsayılan yazı tipi poppins
   );
 
@@ -89,6 +88,14 @@ class AppTheme {
     border: OutlineInputBorder(
       borderSide: BorderSide.none, // Border olmaması için
       borderRadius: BorderRadius.circular(6), // Border-radius
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide.none, // Enabled durumda border'ı kaldırır
+      borderRadius: BorderRadius.circular(6),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide.none, // Focused durumda border'ı kaldırır
+      borderRadius: BorderRadius.circular(6),
     ),
     hintStyle: const TextStyle(
       fontFamily: AppFonts.poppins,

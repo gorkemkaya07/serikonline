@@ -9,7 +9,7 @@ class CustomCardDescription extends StatelessWidget {
     required this.description,
     required this.lines,
   });
-  final int lines;
+  final dynamic lines;
   final String description;
   @override
   Widget build(BuildContext context) {

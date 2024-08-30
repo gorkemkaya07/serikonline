@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:serikonline/core/widgets/time_ago/time_ago_widget.dart';
 import 'package:serikonline/data/models/ads_model.dart';
-
 import '../../../../core/widgets/custom_card_description/custom_card_description_widget.dart';
 import '../../../../core/widgets/custom_card_title/custom_card_title_widget.dart';
 import '../../../../core/widgets/custom_card_with_icon_text/custom_card_with_icon_text_widget.dart';
 import '../../../../core/widgets/custom_divider/custom_divider_widget.dart';
 import '../../../../core/widgets/custom_image/custom_image_widget.dart';
 
-class UserAdsCardWidget extends StatelessWidget {
-  const UserAdsCardWidget({
+class JobAdsCardWidget extends StatelessWidget {
+  const JobAdsCardWidget({
     super.key,
     required this.adsList,
   });
@@ -24,9 +24,7 @@ class UserAdsCardWidget extends StatelessWidget {
         shrinkWrap: true,
         itemBuilder: (context, index) {
           return InkWell(
-            onTap: () => adsList[index].category == 'job'
-                ? Get.toNamed('/job_detail', arguments: adsList[index])
-                : Get.toNamed('/sale_detail', arguments: adsList[index]),
+            onTap: () => Get.toNamed('/job_ads_detail', arguments: adsList[index]),
             child: SizedBox(
                 width: Get.width,
                 height: 112,
@@ -54,7 +52,6 @@ class UserAdsCardWidget extends StatelessWidget {
                                       description: adsList[index].company,
                                       lines: 1,
                                     ),
-                                    CustomCardWithIconTextWidget(text: adsList[index].views.toString(), icon: Icons.visibility_outlined),
                                   ],
                                 ),
                               ),
@@ -65,7 +62,7 @@ class UserAdsCardWidget extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  InkWell(onTap: () {}, child: const Icon(Icons.more_horiz)),
+                                  TimeAgoWidget(dateTime: DateTime(2024, 7, 16)),
                                   CustomCardWithIconTextWidget(
                                     text: adsList[index].location,
                                     icon: Icons.location_on_outlined,

@@ -1,7 +1,11 @@
 import 'package:get/get.dart';
 import 'package:serikonline/core/bindings/initial_binding.dart';
 import 'package:serikonline/modules/ads/bindings/ads_binding.dart';
+import 'package:serikonline/modules/ads/bindings/sale_ads_binding.dart';
+import 'package:serikonline/modules/ads/bindings/sale_ads_detail_binding.dart';
 import 'package:serikonline/modules/ads/views/ads_view.dart';
+import 'package:serikonline/modules/ads/views/sale_ads_detail_view.dart';
+import 'package:serikonline/modules/ads/views/sale_ads_view.dart';
 import 'package:serikonline/modules/home/bindings/home_binding.dart';
 import 'package:serikonline/modules/info/bindings/info_binding.dart';
 import 'package:serikonline/modules/info/bindings/info_bus_prices_binding.dart';
@@ -23,6 +27,10 @@ import 'package:serikonline/modules/profile/views/profile_user_ads_view.dart';
 import 'package:serikonline/modules/profile/views/profile_user_inactive_comments_view.dart';
 import 'package:serikonline/modules/profile/views/profile_user_info_view.dart';
 import 'package:serikonline/modules/profile/views/profile_view.dart';
+import '../../modules/ads/bindings/job_ads_binding.dart';
+import '../../modules/ads/bindings/job_ads_detail_binding.dart';
+import '../../modules/ads/views/job_ads_detail_view.dart';
+import '../../modules/ads/views/job_ads_view.dart';
 import '../../modules/home/views/home_view.dart';
 import '../../modules/news/views/news_view.dart';
 import '../../modules/profile/bindings/profile_contact_us_binding.dart';
@@ -153,6 +161,30 @@ class AppPages {
       name: AppRoutes.NEWS_DETAIL,
       page: () => const NewsDetailView(),
       binding: NewsDetailBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.SALE_ADS,
+      page: () => SaleAdsView(),
+      binding: SaleAdsBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.SALE_ADS_DETAIL,
+      page: () => SaleAdsDetailView(),
+      binding: SaleAdsDetailBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.JOB_ADS,
+      page: () => JobAdsView(),
+      binding: JobAdsBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.JOB_ADS_DETAIL,
+      page: () => JobAdsDetailView(),
+      binding: JobAdsDetailBinding(),
       transition: Transition.cupertino,
     ),
   ];

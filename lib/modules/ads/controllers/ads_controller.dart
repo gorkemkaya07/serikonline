@@ -19,6 +19,7 @@ class AdsController extends GetxController {
             'İlçemizde bulunan iş ilanlarını buradan inceleyebilirsiniz.',
         imageUrl:
             'https://img.freepik.com/premium-vector/visually-appealing-flat-illustration-job-ads_203633-6435.jpg',
+            route: '/job_ads'
       ),
       MenuCardModel(
         title: '2.El Alışveriş',
@@ -26,6 +27,7 @@ class AdsController extends GetxController {
             '2. El ürünleri alabilir ve satabilirsiniz. ',
         imageUrl:
             'https://w7.pngwing.com/pngs/7/39/png-transparent-shopping-cart-illustration-a-woman-pushing-a-shopping-cart-blue-business-woman-furniture.png',
+            route: '/sale_ads'
       ),
     ]);
   }

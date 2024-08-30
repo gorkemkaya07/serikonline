@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:serikonline/core/theme/app_colors.dart';
 import 'package:serikonline/core/theme/app_theme.dart';
 import 'package:serikonline/core/widgets/custom_app_bar/custom_app_bar_widget.dart';
 import 'package:serikonline/core/widgets/custom_divider/custom_divider_widget.dart';
@@ -48,10 +49,11 @@ class NewsDetailView extends GetView<NewsDetailController> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: AppColors.primary,
         onPressed: () {
           _showCommentDialog(context);
         },
-        child: const Icon(Icons.add_comment),
+        child: const Icon(Icons.add_comment,color: Colors.white,),
       ),
     );
   }
@@ -59,43 +61,54 @@ class NewsDetailView extends GetView<NewsDetailController> {
   void _showCommentDialog(
     BuildContext context,
   ) {
-    String newComment = '';
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          backgroundColor: Colors.white,
-          title: const Text('Yorum Yap',style: AppTheme.cardTitle,),
-          content: TextField(
-            maxLines: 5,
-            onChanged: (value) {
-              newComment = value;
-            },
-            decoration: AppTheme.textFieldDecoration.copyWith(hintText: 'Yorumunuzu yazınız',),
-          ),
-          actions: <Widget>[
-            TextButton(
-              child: const Text('İptal'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
+    Get.dialog(Dialog(
+      backgroundColor: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Yorum Yap',
+              style: AppTheme.cardTitle
             ),
-            TextButton(
-              child: const Text('Gönder'),
-              onPressed: () {
-                if (newComment.isNotEmpty) {
-                  controller.addComment(
-                    newComment,
-                    'Aslı Sönmez',
-                    DateTime.now(),
-                  );
-                }
-                Navigator.of(context).pop();
-              },
+            const SizedBox(height: 20.0),
+            TextField(maxLines: 4, decoration: AppTheme.textFieldDecoration.copyWith(hintText: 'Yorumunuzu yazın')),
+            const SizedBox(height: 20.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text(
+                    'İptal',
+                    style: AppTheme.cardTitle.copyWith(color: AppColors.darkgray),
+                  ),
+                ),
+                const SizedBox(width: 8.0),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primary,
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text(
+                    'Gönder',
+                    style: AppTheme.cardTitle.copyWith(color: Colors.white),
+                  ),
+                ),
+              ],
             ),
           ],
-        );
-      },
-    );
+        ),
+      ),
+    ));
   }
 }

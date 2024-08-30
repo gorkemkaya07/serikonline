@@ -20,4 +20,8 @@ class AppRoutes {
   static const INFO_CURRENCY_EXCHANGE_RATES = '/info_currency_exchange_rates';
   static const INFO_BUS_PRICES = '/info_bus_prices';
   static const NEWS_DETAIL = '/news_detail';
+  static const JOB_ADS = '/job_ads';
+  static const JOB_ADS_DETAIL = '/job_ads_detail';
+  static const SALE_ADS = '/sale_ads';
+  static const SALE_ADS_DETAIL = '/sale_ads_detail';
 }

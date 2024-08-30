@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/custom_image/custom_image_widget.dart';
-import '../../controllers/news_detail_controller.dart';
 
 class CustomSliderWidget extends StatelessWidget {
   const CustomSliderWidget({
@@ -11,12 +9,12 @@ class CustomSliderWidget extends StatelessWidget {
     required this.controller,
   });
 
-  final NewsDetailController controller;
+  final dynamic controller;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-     padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
         children: [
           SizedBox(
