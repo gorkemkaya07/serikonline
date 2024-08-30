@@ -14,27 +14,28 @@ class ProfileUserInfoView extends GetView<ProfileUserInfoController> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: const CustomAppBarWidget(),
-        body: Column(
-          children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 20.0),
-              child: CustomImageWidget(
-                  imgUrl:
-                      'https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg',
-                  sizeWidth: 100,
-                  sizeHeight: 100,
-                  sizeBorderRadius: 13),
-            ),
-            const CustomTextField(title: 'Ad'),
-            const CustomTextField(title: 'Soyad'),
-            const CustomTextField(title: 'Telefon Numarası'),
-            const CustomTextField(title: 'Doğum Tarihi'),
-            CustomButton(
-                text: 'Kaydet',
-                func: () {
-                  Get.back();
-                }),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 20.0),
+                child: CustomImageWidget(
+                    imgUrl: 'https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg',
+                    sizeWidth: 100,
+                    sizeHeight: 100,
+                    sizeBorderRadius: 13),
+              ),
+              const CustomTextField(title: 'Ad'),
+              const CustomTextField(title: 'Soyad'),
+              const CustomTextField(title: 'Telefon Numarası'),
+              const CustomTextField(title: 'Doğum Tarihi'),
+              CustomButton(
+                  text: 'Kaydet',
+                  func: () {
+                    Get.back();
+                  }),
+            ],
+          ),
         ));
   }
 }
@@ -55,17 +56,11 @@ class CustomButton extends StatelessWidget {
         onTap: func,
         child: Container(
           width: Get.width,
-          height: 60,
+          height: 50,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(6),
               color: AppColors.primary,
-              boxShadow: [
-                BoxShadow(
-                    offset: const Offset(0, 4),
-                    blurRadius: 30,
-                    color: Colors.black.withOpacity(.1),
-                    spreadRadius: 5)
-              ]),
+              boxShadow: [BoxShadow(offset: const Offset(0, 4), blurRadius: 30, color: Colors.black.withOpacity(.1), spreadRadius: 5)]),
           child: Center(
             child: Text(
               text,

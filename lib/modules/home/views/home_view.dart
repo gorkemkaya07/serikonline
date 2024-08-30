@@ -21,7 +21,7 @@ class HomeView extends GetView<HomeController> {
               CustomLatestNewsWidget(newsList: controller.news),
               const Padding(
                 padding: EdgeInsets.only(top: 15.0, left: 20, right: 20),
-                child: SectionTitleWidget(title: "Güncel Bilgiler", showAll: true),
+                child: SectionTitleWidget(title: "Güncel Bilgiler", showAll: true,route: '/info',),
               ),
               MenuCardListWidget(
                 menuList: controller.info,

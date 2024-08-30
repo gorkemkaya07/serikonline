@@ -25,11 +25,11 @@ class UserAdsCardWidget extends StatelessWidget {
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () => adsList[index].category == 'job'
-                ? Get.toNamed('/job_detail', arguments: adsList[index])
-                : Get.toNamed('/sale_detail', arguments: adsList[index]),
+                ? Get.toNamed('/job_ads_detail', arguments: adsList[index])
+                : Get.toNamed('/sale_ads_detail', arguments: adsList[index]),
             child: SizedBox(
                 width: Get.width,
-                height: 112,
+                height: 116,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -60,7 +60,7 @@ class UserAdsCardWidget extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              height: 80,
+                              height: 84,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.end,

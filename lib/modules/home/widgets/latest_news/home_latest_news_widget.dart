@@ -19,7 +19,7 @@ class CustomLatestNewsWidget extends StatelessWidget {
       children: [
         const Padding(
           padding: EdgeInsets.only(top: 15.0, left: 20, right: 20),
-          child: SectionTitleWidget(title: "En son haberler", showAll: true, route: 'news'),
+          child: SectionTitleWidget(title: "En son haberler", showAll: true, route: '/news'),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 20.0, bottom: 20, top: 20),
