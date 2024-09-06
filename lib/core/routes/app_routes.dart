@@ -24,4 +24,6 @@ class AppRoutes {
   static const JOB_ADS_DETAIL = '/job_ads_detail';
   static const SALE_ADS = '/sale_ads';
   static const SALE_ADS_DETAIL = '/sale_ads_detail';
+  static const USER_REGISTER = '/user_register';
+    static const USER_REGISTER_OTP = '/user_register_otp';
 }

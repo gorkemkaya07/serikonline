@@ -6,6 +6,8 @@ import 'package:serikonline/modules/ads/bindings/sale_ads_detail_binding.dart';
 import 'package:serikonline/modules/ads/views/ads_view.dart';
 import 'package:serikonline/modules/ads/views/sale_ads_detail_view.dart';
 import 'package:serikonline/modules/ads/views/sale_ads_view.dart';
+import 'package:serikonline/modules/auth/binding/user_register_binding.dart';
+import 'package:serikonline/modules/auth/view/user_register_view.dart';
 import 'package:serikonline/modules/home/bindings/home_binding.dart';
 import 'package:serikonline/modules/info/bindings/info_binding.dart';
 import 'package:serikonline/modules/info/bindings/info_bus_prices_binding.dart';
@@ -185,6 +187,12 @@ class AppPages {
       name: AppRoutes.JOB_ADS_DETAIL,
       page: () => JobAdsDetailView(),
       binding: JobAdsDetailBinding(),
+      transition: Transition.cupertino,
+    ),
+        GetPage(
+      name: AppRoutes.USER_REGISTER,
+      page: () => UserRegisterView(),
+      binding: UserRegisterBinding(),
       transition: Transition.cupertino,
     ),
   ];
